@@ -23,7 +23,7 @@ BUILD_FILES      = build/Vertica.o \
 PACKAGE_LIBNAME   = lib/StringsLib.so
 
 CXX=g++
-CXXFLAGS=-g -D HAVE_LONG_LONG_INT_64 -c -I ../include -Wall -Wno-unused-value -fPIC -I $(VERTICA_SDK_INCLUDE) -I $(THIRD_PARTY_INCLUDE)
+CXXFLAGS=-g -D HAVE_LONG_LONG_INT_64 -c -I ../include -Wall -Wno-unused-value -fPIC -I $(VERTICA_SDK_INCLUDE) -I $(THIRD_PARTY_INCLUDE) -std=c++11 -D_GLIBCXX_USE_CXX11_ABI=0
 LDFLAGS=-shared
 
 # add optimization if not a debug build
